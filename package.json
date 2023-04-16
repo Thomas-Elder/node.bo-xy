@@ -1,0 +1,37 @@
+{
+  "name": "bo-xy-redux",
+  "version": "1.0.1",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "start": "node app.js",
+    "test": "jasmine --config=./spec/support/jasmine.json",
+    "cover": "c8 --exclude=spec/* jasmine --config=./spec/support/jasmine.json",
+    "watch": "watchify client/browserify.js -p esmify -o client/game_sn.js -v",
+    "build": "browserify client/browserify.js -p esmify | uglifyjs -mc > client/game_sn.js"
+  },
+  "author": "thomas elder",
+  "engines": {
+    "node": "18.16.0"
+  },
+  "dependencies": {
+    "browserify": "*",
+    "errorhandler": "*",
+    "express": "*",
+    "howler": "*",
+    "morgan": "*",
+    "pug": "*",
+    "socket.io": "*",
+    "uglify-js": "*"
+  },
+  "devDependencies": {
+    "async": "*",
+    "c8": "*",
+    "esmify": "*",
+    "jasmine": "*",
+    "request": "*",
+    "socket.io-client": "*",
+    "watchify": "*"
+  },
+  "heroku-run-build-script": true
+}

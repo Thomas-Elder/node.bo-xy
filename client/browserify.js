@@ -1,0 +1,1 @@
+require('./game_sn/main.js');
