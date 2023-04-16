@@ -1,6 +1,5 @@
 var Server = require('../../server/server');
 
-var request = require('request');
 var io_client = require('socket.io-client');
 
 describe('Single events',
